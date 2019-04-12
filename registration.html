@@ -12,7 +12,16 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-element {
+            width: 100%;
 
+        }
+
+        .page-body{
+            max-width: 576px;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,7 +30,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">MY WEB SITE</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -56,134 +66,115 @@
 </nav>
 
 <!-- Page Content -->
-<center><br><h1>Register</h1><br>
-<h5>Don't miss any upcoming news by registering</h5><br></center>
-<center><div class="container">
-    <br>
+<div class="text-center mb-5">
+    <br><h1>Register</h1><br>
+    <h5>Don't miss any upcoming news by registering</h5>
+</div>
+
+<div class="container text-center page-body">
     <form action="">
-        <table >
-            <tr>
-                <td valign="top">
-                    <label>Name and Surname: </label>
-                </td>
-                <td valign="top">
-                    <input type="namesurname" name="namesurname" maxlength="50" size="35">
-                </td>
-            </tr>
+        <div class="row">
+            <div class="col-4">
+                <label>Name and Surname: </label>
+            </div>
+            <div class="col">
+                <input type="namesurname" name="namesurname" maxlength="50" class="form-element">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label>E-Mail: </label>
+            </div>
+            <div class="col">
+                <input type="email" name="email" maxlength="80" class="form-element">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label>Password: </label>
+            </div>
+            <div class="col">
+                <input type="password" name="password" maxlength="50" class="form-element">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label>Date of Birth </label>
+            </div>
+            <div class="col">
+                <input type="date" name="date_of_birth" maxlength="30" class="form-element">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label>Gender </label>
+            </div>
+            <div class="col">
+                <select class="form-element">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label>About Me: </label>
+            </div>
+            <div class="col">
+                <textarea name="about_me" maxlength="1000" rows="10" class="form-element"></textarea>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-4">
+                <br><label>Upload Your Photo: </label>
+            </div>
+            <div class="col">
+                <br>
+                <input class="form-element" type="file" name="pic" accept="image/*">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label>Mark your interests : </label>
+            </div>
+            <div class="col">
+                <table class="text-left">
+                    <tr>
+                        <td><input type="checkbox"> Sports</td>
+                        <td><input type="checkbox"> Science</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"> Technology</td>
+                        <td><input type="checkbox"> Music</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"> Animals</td>
+                        <td><input type="checkbox"> Fashion</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"> Economy</td>
+                        <td><input type="checkbox"> News</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"> Politics</td>
+                        <td><input type="checkbox"> Games</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col ">
+                <br>
+                <input type="reset" value="Reset Form" class="mr-4">
+                <input type="submit" value="Register" onclick="alert('Thanks for registration!')">
 
-            <tr>
-                <td valign="top">
-                    <label>E-Mail: </label>
-                </td>
-                <td valign="top">
-                    <input type="email" name="email" maxlength="80" size="35">
-                </td>
-            </tr>
-            <tr>
-                <td valign="top">
-                    <label>Password: </label>
-                </td>
-                <td valign="top">
-                    <input type="password" name="password" maxlength="50" size="35">
-                </td>
+            </div>
+        </div>
 
-            </tr>
-            <tr>
-                <td valign="top">
-                    <label>Date of Birth </label>
-                </td>
-                <td valign="top">
-                    <input type="date" name="date_of_birth" maxlength="30" size="35">
-                </td>
-            </tr>
-            <tr>
-                <td valign="top">
-                    <label>Gender </label>
-                </td>
-                <td valign="top">
-                    <select>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td valign="top">
-                    <label>About Me: </label>
-                </td>
-                <td valign="top">
-                    <textarea name="about_me" maxlength="1000" cols="38" rows="10"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td><br/></td>
-            </tr>
-            <tr>
-                <td valign="top">
-                    <label>Upload Your Photo: </label>
-                </td>
-                <td valign="top">
-                    <input type="file" name="pic" accept="image/*">
-                </td>
-            </tr>
-
-            <tr>
-                <td><br/></td>
-            </tr>
-
-            <tr>
-                <td valign="top">
-                    <label>Mark your interests : </label>
-                </td>
-                <td valign="top">
-                    <table>
-                        <tr>
-                            <td><input type="checkbox"> Sports </td>
-                            <td><input type="checkbox"> Science</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"> Technology</td>
-                            <td><input type="checkbox"> Music</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"> Animals</td>
-                            <td><input type="checkbox"> Fashion</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"> Economy</td>
-                            <td><input type="checkbox"> News</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"> Politics</td>
-                            <td><input type="checkbox"> Games</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td><br/></td>
-            </tr>
-
-
-            <tr>
-                <td colspan="2" align="center">
-                    <input type="submit" value="Register" onclick="alert('Thanks for registration!')">
-                </td>
-            </tr>
-            <tr>
-                <td><br/></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center">
-                    <input type="reset" value="Reset Form">
-                </td>
-            </tr>
-
-        </table>
     </form>
     <br><br>
-</div></center>
+</div>
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
